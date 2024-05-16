@@ -3,13 +3,28 @@
 ## Sum of Products
 
 It is used when the output is high.
-Total number of combination = 2^n, where n is the number of variables.&#x20;
+Total number of combination is $$2^n$$, where n is the number of variables.
 
 Truth Table:
 
-<table data-full-width="false"><thead><tr><th align="center">m</th><th align="center">A</th><th align="center">B</th><th align="center">C</th><th align="center">F</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">0</td><td align="center">0</td><td align="center">0</td><td align="center">0</td></tr><tr><td align="center">1</td><td align="center">0</td><td align="center">0</td><td align="center">1</td><td align="center">0</td></tr><tr><td align="center">2</td><td align="center">0</td><td align="center">1</td><td align="center">0</td><td align="center">1</td></tr><tr><td align="center">3</td><td align="center">0</td><td align="center">1</td><td align="center">1</td><td align="center">0</td></tr><tr><td align="center">4</td><td align="center">1</td><td align="center">0</td><td align="center">0</td><td align="center">1</td></tr><tr><td align="center">5</td><td align="center">1</td><td align="center">0</td><td align="center">1</td><td align="center">1</td></tr><tr><td align="center">6</td><td align="center">1</td><td align="center">1</td><td align="center">0</td><td align="center">1</td></tr><tr><td align="center">7</td><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">1</td></tr></tbody></table>
+$$
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+m & A & B & C & F \\
+\hline
+0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 1 & 0 \\
+2 & 0 & 1 & 0 & 1 \\
+3 & 0 & 1 & 1 & 0 \\
+4 & 1 & 0 & 0 & 1 \\
+5 & 1 & 0 & 1 & 1 \\
+6 & 1 & 1 & 0 & 1 \\
+7 & 1 & 1 & 1 & 1 \\
+\hline
+\end{tabular}
+$$
 
-Boolean Function of SOP,&#x20;
+Boolean Function of SOP,
 
 $$
 \begin{align*}

@@ -78,21 +78,44 @@ F = A(B+C)(C+D)
 * Identity Law -> $$A+0=A \quad and \quad A.1=A$$
 * Domination Law -> $$A+1=1 \quad and \quad A.0=0$$
 * Idempotent Law -> $$A+A=A \quad and \quad A.A=A$$
+* Complement Law -> $$A+\overline A=1 \quad and \quad A.\overline A=0$$
 * Commutative Law -> $$A+B=B+A \quad and \quad A.B=B.A$$
 * Associative Law -> $$A+(B+C)=(A+B)+C \quad and \quad A.(B.C)=(A.B).C$$
 * Distributive Law -> $$A.(B+C) = A.B+A.C \quad and \quad A+B.C=(A+B).(A+C)$$
+* Absorption Theorem
 * De Morgan's Theorem
+* Redundancy Theorem
 
 ### De Morgan's Theorem
 
 $$
-( X . Y)' = X' + Y' \quad and \quad ( X + Y)' = X'.Y'
+( A . B)' = A' + B' \quad and \quad ( A + B)' = A'.B'
+$$
+
+#### Example 1
+
+$$
+\begin{align*}
+    F   &= \overline{A+\overline{B}C} \\
+        &= \overline{A}\,(\overline{\overline{B}C}) \\
+        &= \overline{A}\,(\overline{\overline{B}}+\overline{C}) \\
+        &= \overline{A}\,(B+\overline{C})
+\end{align*}
+$$
+
+#### Example 2
+
+$$
+\begin{align*}
+    F   &= \overline{(A+C)(A+\overline{B})(\overline{A}+B+\overline{C})} \\
+        &= TODO
+\end{align*}
 $$
 
 ### Absorption Theorem
 
 $$
-X.(X+Y)=X \quad and \quad X+(X.Y)=X
+A.(A+B)=A \quad and \quad A+(A.B)=A
 $$
 
 ### Redundancy Theorem
@@ -122,7 +145,7 @@ In the earliest computers, switches were opened and closed by magnetic fields pr
 
 A Boolean function is a function whose arguments, as well as the function itself, assume values from a two-element set {0, 1}. Example:
 
-```
+```text
 F(X, Y) = X'Y' + XY + X'Y
 ```
 
@@ -203,19 +226,168 @@ $$
 \end{align*}
 $$
 
+## Boolean Function Representation
+
 There are two ways to convert truth tables to Boolean functions:
 
-* Using Sum of Products / Minterms
-* Using Product of Sums / Maxterms
+* Using Sum of Products(SOP) / Minterms
+* Using Product of Sums(POS) / Maxterms
+
+
+### Canonical Form and Non-Canonical Form
+
+* Canonical form: A Boolean function is in canonical form if it is expressed as a sum of minterms or product of maxterms where all the variables are present in each term.
+* Non-canonical form: A Boolean function is in non-canonical form if it is expressed as a sum of maxterms or product of minterms where all the variables are not present in each term.
+
 
 ### Minterm
+
+In canonical form of SOP, each term is called a minterm. A minterm is a product of all the variables in the function in either normal or complemented form.
 
 * Product (AND function)
 * Contains all variables
 * Evaluates to '1' for a specific combination
 
+Two variable minterms:
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+A & B & minterms & Notation \\
+\hline
+0 & 0 & A'B' & m_0 \\
+0 & 1 & A'B & m_1 \\
+1 & 0 & AB' & m_2 \\
+1 & 1 & AB & m_3 \\
+\hline
+\end{array}
+$$
+
+Three variable minterms:
+$$
+\begin{array}{|c|c|c|c|c|}
+\hline
+A & B & C & minterms & Notation \\
+\hline
+0 & 0 & 0 & A'B'C' & m_0 \\
+0 & 0 & 1 & A'B'C & m_1 \\
+0 & 1 & 0 & A'BC' & m_2 \\
+0 & 1 & 1 & A'BC & m_3 \\
+1 & 0 & 0 & AB'C' & m_4 \\
+1 & 0 & 1 & AB'C & m_5 \\
+1 & 1 & 0 & ABC' & m_6 \\
+1 & 1 & 1 & ABC & m_7 \\
+\hline
+\end{array}
+$$
+
+#### Example of Minterm
+
+$$
+\begin{array}{|ccc|c|}
+\hline
+\text{A} & \text{B} & \text{C} & \text{F} \\
+\hline
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+1 & 1 & 0 & 0 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{array}
+$$
+
+From the truth table, the Boolean function is:
+
+$$
+\begin{align*}
+    F   &= A'B'C' + A'BC' + AB'C' + ABC \\
+        &= m_0 + m_2 + m_4 + m_7 \\
+        &= \sum(0, 2, 4, 7)
+\end{align*}
+$$
+
+
 ### Maxterm
+
+In canonical form of POS, each term is called a maxterm. A maxterm is a sum of all the variables in the function in either normal or complemented form.
 
 * Sum (OR function)
 * Contains all variables
 * Evaluates to '0' for a specific combination
+
+Two variable maxterms:
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+A & B & maxterms & Notation \\
+\hline
+0 & 0 & A+B & M_0 \\
+0 & 1 & A+B' & M_1 \\
+1 & 0 & A'+B & M_2 \\
+1 & 1 & A'+B' & M_3 \\
+\hline
+\end{array}
+$$
+
+Three variable maxterms:
+$$
+\begin{array}{|c|c|c|c|c|}
+\hline
+A & B & C & maxterms & Notation \\
+\hline
+0 & 0 & 0 & A+B+C & M_0 \\
+0 & 0 & 1 & A+B+C' & M_1 \\
+0 & 1 & 0 & A+B'+C & M_2 \\
+0 & 1 & 1 & A+B'+C' & M_3 \\
+1 & 0 & 0 & A'+B+C & M_4 \\
+1 & 0 & 1 & A'+B+C' & M_5 \\
+1 & 1 & 0 & A'+B'+C & M_6 \\
+1 & 1 & 1 & A'+B'+C' & M_7 \\
+\hline
+\end{array}
+$$
+
+#### Example of Maxterm
+
+$$
+\begin{array}{|ccc|c|c|}
+\hline
+\text{A} & \text{B} & \text{C} & \text{F} & \text{F'} \\
+\hline
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 1 & 0 & 1 \\
+0 & 1 & 0 & 1 & 0 \\
+0 & 1 & 1 & 0 & 1 \\
+1 & 0 & 0 & 1 & 0 \\
+1 & 0 & 1 & 0 & 1 \\
+1 & 1 & 0 & 0 & 1 \\
+1 & 1 & 1 & 1 & 0 \\
+\hline
+\end{array}
+$$
+
+From the truth table, the Boolean function is:
+$$
+\begin{align*}
+    F'              &= A'B'C + A'BC + AB'C + ABC' \\
+    \overline{F'}   &= \overline{A'B'C + A'BC + AB'C + ABC'} \\
+    F               &= (\overline{A'B'C}).(\overline{A'BC}).(\overline{AB'C}).(\overline{ABC'}) \\
+                    &= (A+B+C').(A+B'+C').(A'+B+C').(A'+B'+C) \\
+                    &= M_1.M_3.M_5.M_6 \\
+                    &= \prod(1, 3, 5, 6)
+\end{align*}
+$$
+
+We can also write the function directly from the truth table by taking the maxterms that are 0.
+$$
+\begin{align*}
+    F   &= (A+B+C').(A+B'+C').(A'+B+C').(A'+B'+C) \\
+        &= M_1.M_3.M_5.M_6 \\
+        &= \prod(1, 3, 5, 6)
+\end{align*}
+$$
+
+
