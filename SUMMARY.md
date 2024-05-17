@@ -21,3 +21,5 @@
 * [SR Latch](sr-latch.md)
 * [Flip-Flops](flip-flops.md)
 * [Registers](registers.md)
+* [Counters](counters.md)
+* [Finite State Machine](finite-state-machine.md)
