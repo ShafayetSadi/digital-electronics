@@ -258,7 +258,7 @@ To Do for semester final.
 
 Implement the boolean function $$F(A, B, C, D) = \Sigma m(1, 4, 5, 7, 9, 12, 13)$$ using a 4-to-1 multiplexer.
 
-Solution:
+**Solution:**
 
 Step 1: Identify the number of input lines required for the given boolean function. The number of input lines required is 4.
 

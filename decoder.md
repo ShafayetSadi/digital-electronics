@@ -1,6 +1,6 @@
 # Decoder
 
-A decoder is a combinational logic circuit that converts binary information from n input lines to a maximum of $2^n$ unique output lines. A decoder is also called a "n-to-2^n" decoder. The decoder is used to demultiplex the data from one of the many input lines to one of the many output lines. It is the opposite of the encoder.
+A decoder is a combinational logic circuit that converts binary information from n input lines to a maximum of $$2^n$$ unique output lines. A decoder is also called a "n-to-2^n" decoder. The decoder is used to demultiplex the data from one of the many input lines to one of the many output lines. It is the opposite of the encoder.
 
 
 ## Full Adder using Decoder

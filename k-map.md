@@ -11,7 +11,7 @@ The required boolean results are transferred from a truth table onto a two-dimen
 * Adjacent cell on a K-Map differs by only one variable.
 * Groups may not include any cell containing a zero.
 * Groups maybe horizontal or vertical, but not diagonal.
-* Group must contain $$2^n$$cells, like 1, 2, 4, or 8.
+* Group must contain $$2^n$$ cells, like 1, 2, 4, or 8.
 * Groups should be as large as possible.
 * Each cell containing a 1 must be in at least one group.
 * Groups may overlap

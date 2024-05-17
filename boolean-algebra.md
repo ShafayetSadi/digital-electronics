@@ -115,7 +115,7 @@ $$
 ### Absorption Theorem
 
 $$
-A.(A+B)=A \quad and \quad A+(A.B)=A
+A(A+B)=A \quad and \quad A+A.B=A
 $$
 
 ### Redundancy Theorem
@@ -391,3 +391,134 @@ $$
 $$
 
 
+### Takeaways
+
+From the above examples, we can see that the minterms and maxterms are complementary to each other. If a minterm is 1, then the corresponding maxterm is 0 and vice versa.
+
+$$
+\begin{array}{|ccc|c|}
+\hline
+\text{A} & \text{B} & \text{C} & \text{F} \\
+\hline
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 \\
+1 & 1 & 0 & 0 \\
+1 & 1 & 1 & 1 \\
+\hline
+\end{array}
+$$
+
+From the above truth table, the canonical SOP form is:
+$$
+F_1 = \sum(0, 2, 4, 7)
+$$
+
+Now the canonical POS form is:
+$$
+\begin{align*}
+\overline{F_1} &= \sum(1, 3, 5, 6) \\
+               &= m_1 + m_3 + m_5 + m_6
+           F_2 &= \overline{m_1 + m_3 + m_5 + m_6} \\
+               &= \overline{m_1}. \overline{m_3}. \overline{m_5}. \overline{m_6} \\
+               &= M_1.M_3.M_5.M_6 \\
+               &= \prod(1, 3, 5, 6)
+\end{align*}
+$$
+
+Q. We are given the following boolean function:
+$$
+F(A,B,C) = \sum(1, 2, 5, 6)
+$$
+
+We can see that the function is in SOP form and it has 3 variables. So it has 8 minterms and 8 maxterms. In POS form, we will have the terms that are not present in the function. So the POS form of the function will be:
+$$
+\begin{align*}
+F &= M_0.M_3.M_4.M_7 \\
+  &= \prod(0, 3, 4, 7)
+\end{align*}
+$$
+
+
+### Conversion from Non-Canonical to Canonical Form
+
+Q. Given the boolean function:
+$$
+F(A, B) = A + B
+$$
+We can observe that the function is in non-canonical form. To convert it to canonical form, we have to utilize the boolean algebra postulates. The function can be written as:
+
+$$
+\begin{align*}
+F &= A + B \\
+    &= A.1 + B.1 \quad \text{Identity Law} \\
+    &= A.(B+B') + B.(A+A') \quad \text{Complement Law} \\
+    &= A.B + A.B' + A.B + A'.B \quad \text{Distributive Law} \\
+    &= AB + AB' + A'B \\
+\end{align*}
+$$
+
+Steps:
+
+1. Include missing terms.
+2. Expand the expression.
+3. Remove redundant terms.
+
+Q. Given the boolean function:
+$$
+F(A, B, C) = A + B.C + A.B
+$$
+
+We can see that the function is in non-canonical form. To convert it to canonical form, we have to utilize the boolean algebra postulates. 
+
+Now for the given function:
+$$
+\text{For the first term:} \\
+\begin{align*}
+A &= A.1.1 \\
+    &= A.(B+B').(C+C') \\
+    &= (AB + AB').(C + C') \\
+    &= ABC + ABC' + AB'C + AB'C' \\
+\end{align*}
+
+\text{For the second term:} \\
+\begin{align*}
+B.C &= B.C.1 \\
+    &= B.C.(A+A') \\
+    &= ABC + A'BC \\
+\end{align*}
+
+\text{For the third term:} \\
+\begin{align*}
+A.B &= A.B.1 \\
+    &= A.B.(C+C') \\
+    &= ABC + ABC' \\
+\end{align*}
+$$
+
+So the function can be written as:
+$$
+\begin{align*}
+F(A, B, C) &= ABC + AB'C + AB'C' + ABC + A'BC + ABC + ABC' \\
+              &= ABC + ABC' + AB'C + AB'C' + A'BC \\
+              &= \sum(3, 4, 5, 6, 7)
+\end{align*}
+$$
+
+**Shortcut Method:**
+$$
+\begin{align*}
+F(A, B, C)  &= A.B + C
+            &= AB.X + XX.C \quad \text{X is a variable} \\
+            &= 11.X + XX.1
+\end{align*}
+$$
+For the value of X, 0 or 1 can be used. So values we get are:
+$$110, 111$$, for $11.X$ 
+$$001, 011, 101, 111$$, for $XX.1$
+So the min-terms are:
+$$
+F = \sum(1, 3, 5, 6, 7)

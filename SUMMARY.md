@@ -17,5 +17,7 @@
 * [Demultiplexer](demultiplexer.md)
 * [Encoder](encoder.md)
 * [Decoder](decoder.md)
+* [Sequential Circuits](sequential-circuits.md)
 * [SR Latch](sr-latch.md)
 * [Flip-Flops](flip-flops.md)
+* [Registers](registers.md)

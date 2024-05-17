@@ -16,37 +16,14 @@ A flip-flop is a sequential circuit which stores the data in the form of binary.
 
 <firgure><img src=".gitbook/assets/" alt=""><figcaption><p>SR Flip-Flop</p></figcaption></figure>
 
-Truth Table for NAND gate:
-$$
-\begin{array}{|cc|c|c|}
-\hline
-S^* & R^* & Q & Q' \\
-\hline
-0 & 0 & \text{Invalid} & \text{Invalid} \\
-0 & 1 & 1 & 0 \\
-1 & 0 & 0 & 1 \\
-1 & 1 & \text{Not changed} & {Not Changed} \\
-\hline
-\end{array}
-$$
-
-Boolean expression for SR Flip-Flop:
-$$
-\begin{align*}
-S^* &= \overline{S.Clk} \\
-    &= \overline{S} + \overline{Clk} \\
-R^* &= \overline{R.Clk} \\
-    &= \overline{R} + \overline{Clk} \\
-\end{align*}
-$$
 
 The truth table for SR Flip-Flop is:
 $$
-\begin{array}{|ccc|cc|}
+\begin{array}{|ccc|c|c|}
 \hline
 Clk & S & R & Q & Q' \\
 \hline
-0 & x & x & \text{Not changed} & \text{Not changed} \\
+0 & X & X & \text{Not changed} & \text{Not changed} \\
 1 & 0 & 0 & \text{Not changed} & \text{Not changed} \\
 1 & 0 & 1 & 0 & 1 \\
 1 & 1 & 0 & 1 & 0 \\
@@ -72,6 +49,9 @@ Q_n & S & R & Q_{n+1} \\
 \hline
 \end{array}
 $$
+
+Now we create the K-Map for the characteristic table:
+TODO
 
 The characteristic equation for SR Flip-Flop is:
 $$
@@ -107,10 +87,11 @@ $$
 
 Truth Table for D Flip-Flop:
 $$
-\begin{array}{|ccc|c|}
+\begin{array}{|cc|c|c|}
 \hline
 Clk & D & Q & Q' \\
-0 & x & \text{Not changed} & \text{Not changed} \\
+\hline
+0 & X & \text{Not changed} & \text{Not changed} \\
 1 & 0 & 0 & 1 \\
 1 & 1 & 1 & 0 \\
 \hline
@@ -154,9 +135,9 @@ Truth Table for JK Flip-Flop:
 $$
 \begin{array}{|ccc|cc|}
 \hline
-Clk & J & K & Q & Q' \\
+CLK & J & K & Q & Q' \\
 \hline
-0 & x & x & \text{Not changed} & \text{Not changed} \\
+0 & X & X & \text{Not changed} & \text{Not changed} \\
 1 & 0 & 0 & \text{Not changed} & \text{Not changed} \\
 1 & 0 & 1 & 0 & 1 \\
 1 & 1 & 0 & 1 & 0 \\
@@ -165,3 +146,58 @@ Clk & J & K & Q & Q' \\
 \end{array}
 $$
 
+The characteristic table for JK Flip-Flop is:
+$$
+\begin{array}{|ccc|c|}
+\hline
+Q_n & J & K & Q_{n+1} \\
+\hline
+0 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1 \\
+0 & 1 & 1 & \text{Toggle} \\
+1 & 0 & 0 & 1 \\
+1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 0 \\
+1 & 1 & 1 & \text{Toggle} \\
+\hline
+\end{array}
+$$
+
+The excitation table for JK Flip-Flop is:
+$$
+\begin{array}{|cc|cc|}
+\hline
+Q_n & Q_{n+1} & J & K \\
+\hline
+0 & 0 & 0 & \text{X} \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 1 & \text{X} & 0 \\
+\hline
+\end{array}
+$$
+
+The excitation equation for JK Flip-Flop is:
+$$
+Q_{n+1} = JQ_n' + K'Q_n \\
+$$
+
+## T Flip-Flop
+
+<firgure><img src=".gitbook/assets/t-flip-flop/t-flip-flop.png" alt=""><figcaption><p>T Flip-Flop</p></figcaption></figure>
+
+Truth Table for T Flip-Flop:
+$$
+\begin{array}{|cc|c|c|}
+\hline
+CLK & T & Q & Q' \\
+\hline
+0 & X & \text{Not changed} & \text{Not changed} \\
+1 & 0 & 0 & 1 \\
+1 & 1 & 1 & 0 \\
+\hline
+\end{array}
+$$
+
+TODO

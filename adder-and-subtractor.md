@@ -8,12 +8,18 @@ A half adder is a combinational circuit that performs the addition of two bits a
 
 Truth Table for Half Adder:
 
-|  A  |  B  |  S  |  C  |
-| :-: | :-: | :-: | :-: |
-|  0  |  0  |  0  |  0  |
-|  0  |  1  |  1  |  0  |
-|  1  |  0  |  1  |  0  |
-|  1  |  1  |  0  |  1  |
+$$
+\begin{array}{|cc|c|c|}
+\hline
+A & B & S & C \\
+\hline
+0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 \\
+1 & 0 & 1 & 0 \\
+1 & 1 & 0 & 1 \\
+\hline
+\end{array}
+$$
 
 The K-Map for the sum bit is:
 
@@ -22,7 +28,7 @@ The K-Map for the sum bit is:
 The boolean expression for the sum bit is:
 
 $$
-S = A \oplus B
+S = AB' + A'B = A \oplus B
 $$
 
 The K-Map for the carry bit is:
@@ -80,8 +86,10 @@ The boolean expression for the sum bit is:
 
 $$
 \begin{align*}
-S &= AB'C' + A'B'C + ABC + A'BC' \\
-&= A \oplus B \oplus C
+S   &= AB'C' + A'B'C + ABC + A'BC' \\
+    &= A'(B'C + BC') + A(B'C' + BC) \\
+    &= A'(B \oplus C) + A(\overline{B \oplus C}) \\
+    &= A \oplus B \oplus C_{in}
 \end{align*}
 $$
 
@@ -106,6 +114,10 @@ $$
 C_{out} &= A.B + B.C_{in} + A.C_{in} \\ C_{out} &= A.B + C_{in}.(A \oplus B)
 \end{align*}
 $$
+
+Logic gate for full adder:
+
+TODO
 
 ### Full Adder using NAND Gates
 
@@ -134,7 +146,7 @@ A half subtractor is a combinational circuit that performs the subtraction of tw
 
 Truth Table for half subtractor:
 $$
-\begin{array}{|c|c|c|c|}
+\begin{array}{|cc|c|c|}
 \hline
 \ A \ & \ B \ & \ D \ & \ B_o \ \\
 \hline
@@ -149,9 +161,12 @@ $$
 \end{array}
 $$
 
+The K-map for the difference bit and the borrow bit is:
+TODO
+
 The boolean expression for the difference bit is:
 $$
-D = A \oplus B
+D = AB' + A'B = A \oplus B
 $$
 
 The boolean expression for the borrow bit is:
@@ -174,7 +189,7 @@ A full subtractor is a combinational circuit that performs the subtraction of th
 
 Truth Table for full subtractor:
 $$
-\begin{array}{|c|c|c|c|c|}
+\begin{array}{|ccc|c|c|}
 \hline
 \quad A \quad & \quad B \quad & \quad B_{in} \quad & \quad D \quad & \quad B_{out} \quad \\
 \hline
@@ -214,7 +229,11 @@ B_{out} = B.C + A'.B + A'.C
 $$
 
 Logic gate for full subtractor:
-<figure><img src=".gitbook/assets/adder-subtractor/fullSubtractorLogicGate.png" alt="" width="513"><figcaption><p>Full subtractor</p></figcaption></figure>
+TODO
+
+### Full Subtractor using Half Subtractor
+
+TODO
 
 ### Full Subtractor using NAND Gates
 
@@ -231,6 +250,7 @@ Todo
 ## Binary Adder-Subtractor
 
 Todo
+
 
 ## 2-bit Multiplier
 
@@ -261,7 +281,7 @@ $$
 P_0 &= A_0B_0 \\
 P_1 &= A_1B_0 + A_0B_1 \\
 P_2 &= A_1B_1 + C_1 \\
-P_3 &= C_1
+P_3 &= C_2
 \end{align*}
 $$
 We can see that the product bits are the sum of the partial products and the carry bits. The $$P_0$$ can be implemented using an AND gate. The $$P_1$$ and $$P_2$$ can be implemented using two half adder circuits. The $$P_3$$ can be implemented using an OR gate. 
@@ -269,7 +289,7 @@ We can see that the product bits are the sum of the partial products and the car
 The logic gate for 2-bit multiplier:
 <figure><img src=".gitbook/assets/2BitMultiplierLogicGate.png" alt="" width="513"><figcaption><p>2-bit multiplier</p></figcaption></figure>
 
-## Carry Lookahead Adder
+## Carry Look Ahead Adder
 
 Todo
 
