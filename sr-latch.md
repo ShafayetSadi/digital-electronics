@@ -74,3 +74,7 @@ S & R & Q & Q' \\
 \hline
 \end{array}
 $$
+
+## Switch Debouncing using SR Latch
+
+It is impossible to obtain a clean voltage transition from a mechanical switch due to contact bounce. The contact bounce is the rapid opening and closing of the switch contacts. Switch debouncing is a technique used to remove the unwanted noise produced by the mechanical switches. The noise is produced due to the mechanical contacts of the switch. The noise can be removed by using the SR latch.

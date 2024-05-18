@@ -20,7 +20,7 @@ It is a way of representing letters, characters, and numbers using binary number
 
 ## Difference between ASCII and Unicode
 
-| ASCII | Unicode |
+| **ASCII** | **Unicode** |
 |-------|---------|
 | ASCII stands for American Standard Code for Information Interchange. | Unicode is a universal character encoding standard. |
 | ASCII uses 7 bits to represent a character. | Unicode uses 8, 16, or 32 bits to represent a character. |
@@ -31,10 +31,11 @@ It is a way of representing letters, characters, and numbers using binary number
 | ASCII is not backward compatible with Unicode. | Unicode is backward compatible with ASCII. |
 
 
-## Bytes and Nibbles
+## Bytes, Nibbles and Words
 
 * **Byte:** A group of 8 bits is called a byte. It is the basic unit of storage in a computer.
 * **Nibble:** A group of 4 bits is called a nibble. It is half of a byte.
+* **Word:** It depends on the computer architecture. In a 16-bit computer, a word is 16 bits. In a 32-bit computer, a word is 32 bits. In a 64-bit computer, a word is 64 bits.
 
 ## Why Binary Codes are Used?
 

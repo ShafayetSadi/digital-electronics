@@ -376,3 +376,11 @@ Step 4: Write the sum of minterms for the output of the mux.
 
 Step 5: Simplify the sum of minterms for the output of the mux.
 
+
+## Applications of Multiplexer
+
+* Data Routing: Multiplexers are used to route data from multiple sources to a single destination.
+* Data Selection: Multiplexers are used to select data from multiple sources.
+* Parallel to Serial Conversion: Multiplexers are used to convert parallel data to serial data.
+* Operation Sequencing: Multiplexers are used to sequence the operations of a system.
+* Logic Function Generation: Multiplexers are used to generate logic functions.

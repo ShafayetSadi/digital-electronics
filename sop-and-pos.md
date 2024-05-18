@@ -150,6 +150,9 @@ $$
 \end{align*}
 $$
 
+## Why are they named Minters and Maxterms?
+
+The prefix in Minterm 'min' suggests that it is the smallest term that can be formed from the variables. The prefix in Maxterm 'max' suggests that it is the largest term that can be formed from the variables.
 
 ## Takeaways
 
@@ -235,23 +238,27 @@ $$
 We can see that the function is in non-canonical form. To convert it to canonical form, we have to utilize the boolean algebra postulates. 
 
 Now for the given function:
+
+For the first term:
 $$
-\text{For the first term:} \\
 \begin{align*}
 A &= A.1.1 \\
     &= A.(B+B').(C+C') \\
     &= (AB + AB').(C + C') \\
     &= ABC + ABC' + AB'C + AB'C' \\
 \end{align*}
-
-\text{For the second term:} \\
+$$
+For the second term:
+$$
 \begin{align*}
 B.C &= B.C.1 \\
     &= B.C.(A+A') \\
     &= ABC + A'BC \\
 \end{align*}
+$$
 
-\text{For the third term:} \\
+For the third term:
+$$
 \begin{align*}
 A.B &= A.B.1 \\
     &= A.B.(C+C') \\
@@ -281,14 +288,14 @@ $$
 **Shortcut Method:**
 $$
 \begin{align*}
-F(A, B, C)  &= A.B + C
+F(A, B, C)  &= A.B + C \\
             &= AB.X + XX.C \quad \text{X is a variable} \\
             &= 11.X + XX.1
 \end{align*}
 $$
 For the value of X, 0 or 1 can be used. So values we get are:
 $$110, 111$$, for $11.X$ 
-$$001, 011, 101, 111$$, for $XX.1$
+$$001, 011, 101, 111$$, for $$XX.1$$
 So the min-terms are:
 $$
 F = \sum(1, 3, 5, 6, 7)
@@ -382,12 +389,10 @@ $$
 $$
 In POS form, _0 -> A, 1 -> A'_. This is known as standard or canonical POS form. Because it is written directly from a truth table. In this form, each maxterm has all the variables of the function in normal or complemented form.
 
-Relation between SOP and POS:
-TODO
 
 ## Maths
 
-**Q_1:** Express $$F=X'Y + XZ$$ in POS form.
+**Q1:** Express $$F=X'Y + XZ$$ in POS form.
 
 **Solution:**
 $$
@@ -397,10 +402,16 @@ F   &= X'Y + XZ \\
     &= (X+Y)(X+X').(Z+Y)(Z+X') \\
     &= (X+Y)(Y+Z)(Z+X') \\
 \end{align*}
-Now, \\
+$$
+
+Now,
+$$
 X+Y = X+Y+ZZ' = (X+Y+Z)(X+Y+Z') \\
 Y+Z = Y+Z+XX' = (Y+Z+X)(Y+Z+X') \\
 Z+X' = Z+X'+YY' = (Z+X'+Y)(Z+X'+Y') \\
-So, \\
+$$
+
+So,
+$$
 F = (X+Y+Z)(X+Y+Z')(X'+Y+Z)(X'+Y'+Z)
 $$

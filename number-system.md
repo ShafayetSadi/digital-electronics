@@ -16,17 +16,12 @@ Among these are: light bulb (bright or dark), diode (conducting or nonconducting
 
 ## Conversion
 
-TODO
-
 $$
 (3456)_{10} = 3*10^3 + 4*10^2 + 5*10^1 + 6*10^0 = 3000 + 400 + 50 + 6 \\
 (11101010)_2 = 1*2^7 + 1*2^6 + 1*2^5 + 0*2^4 + 1*2^3 + 0*2^2 + 1*2^1 + 0*2^0 = 128 + 64 + 32 + 0 + 8 + 0 + 2 + 0 = 234
 $$
 The leftmost digit is the most significant digit (MSD) and the rightmost digit is the least significant digit (LSD).
 
-## Arithmetic Operations
-
-TODO
 
 ## 1's & 2's Complement
 
@@ -41,7 +36,7 @@ The 1's complement of a binary number is obtained by changing all 1s to 0s and a
 
 For positive numbers, the 1's complement is the same as the binary number. For negative numbers, the 1's complement is the complement of the binary number. The 1's complement of a binary number is obtained by changing the sign bit and taking the complement of the magnitude bits. But we still have two representations for zero: +0 and -0.
 
-Whith `n` bits, the range of numbers that can be represented is from $-(2^{n-1}-1)$ to $2^{n-1}-1$.
+Whith `n` bits, the range of numbers that can be represented is from $$-(2^{n-1}-1)$$ to $$2^{n-1}-1$$.
 
 ### 2's Complement
 
@@ -49,11 +44,7 @@ The 2's complement of a binary number is obtained by adding 1 to the 1's complem
 
 For positive numbers, the 2's complement is the same as the binary number. For negative numbers, the 2's complement is the complement of the binary number. The 2's complement of a binary number is obtained by changing the sign bit and taking the complement of the magnitude bits and adding 1 to the result. In the 2's complement representation, there is only one representation for zero. So, arithmetic operations are easier in the 2's complement representation.
 
-With `n` bits, the range of numbers that can be represented is from $-2^{n-1}$ to $2^{n-1}-1$.
-
-## Arithmetic Operations in 2's Complement
-
-TODO
+With `n` bits, the range of numbers that can be represented is from $$-2^{n-1}$$ to $$2^{n-1}-1$$.
 
 ## Why do we need binary number system?
 
@@ -70,19 +61,15 @@ The octal system consists of 8 numerals or symbols: 0, 1, 2, 3, 4, 5, 6, and 7. 
 
 We can see that $8=2^3$, indicating that each octal digit can be represented by 3 bits. The octal system is widely employed in computer programming because of its simplicity in converting between octal and binary. This means that each octal digit can be converted to 3 bits, and each set of 3 bits can be converted to an octal digit.
 
-## Conversion of Octal
-
-TODO
-
 ## Hexadecimal System
 
 The hexadecimal system consists of 16 numerals or symbols: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. It is commonly used in computer programming and is also referred to as the base-16 system because it has 16 digits. The hexadecimal system is a positional-value system, meaning that the value of a digit depends on its position.
 
-We can see that $16=2^4$, indicating that each hexadecimal digit can be represented by 4 bits. It is widely employed in computer programming due to its simplicity in converting between hexadecimal and binary. This means that each hexadecimal digit can be converted to 4 bits, and each set of 4 bits can be converted to a hexadecimal digit.
+We can see that $$16=2^4$$, indicating that each hexadecimal digit can be represented by 4 bits. It is widely employed in computer programming due to its simplicity in converting between hexadecimal and binary. This means that each hexadecimal digit can be converted to 4 bits, and each set of 4 bits can be converted to a hexadecimal digit.
 
-## Conversion of Hexadecimal
+## Why do we need hexadecimal number system?
 
-TODO
+Hexadecimal allows us to represent large binary numbers in a more compact form. It is easier to read and write hexadecimal numbers than binary numbers. Each hexadecimal digit represents 4 binary bits. Memory addresses, data, and instructions are represented in hexadecimal for readability and consistency. 
 
 ## Floating Point Representation
 
@@ -104,7 +91,7 @@ $$
 
 It is a method of detecting errors in data transmission. A single bit error in a data stream can be detected by using a parity bit. The parity bit is added to the data before it is transmitted. It is an extra bit that makes the number of 1s either even or odd.
 
-<figure><img src=".gitbook/assets/number-system/tx_rx.png" alt=""><figcaption><p>Data Transmission</p></figcaption></figure>
+<figure><img src=".gitbook/assets/number-system/tx_rx.png" alt="" width="260px"><figcaption><p>Data Transmission</p></figcaption></figure>
 
 ### Odd Parity
 
@@ -168,7 +155,7 @@ $$
 \hline
 \end{array}
 $$
-As the value of $P_4$ is 1 and the total number of 1s in the data is odd, the data is not received correctly. So, $$P_4=1$$
+As the value of $$P_4$$ is 1 and the total number of 1s in the data is odd, the data is not received correctly. So, $$P_4=1$$
 
 $$
 \begin{array}{|c|c|c|c|c|}
@@ -179,7 +166,7 @@ $$
 \hline
 \end{array}
 $$
-As the value of $P_2$ is 1 and the total number of 1s in the data is even, the data is received correctly. So, $$P_2=0$$
+As the value of $$P_2$$ is 1 and the total number of 1s in the data is even, the data is received correctly. So, $$P_2=0$$
 
 $$
 \begin{array}{|c|c|c|c|c|}
@@ -191,7 +178,7 @@ $$
 \end{array}
 $$
 
-As the value of $P_1$ is 1 and the total number of 1s in the data is odd, the data is not received correctly. So, $$P_1=1$$
+As the value of $$P_1$$ is 1 and the total number of 1s in the data is odd, the data is not received correctly. So, $$P_1=1$$
 
 So, $$ P_1=1,\ P_2=0,\ P_4=1 $$, which is the binary equivalent of 5. So, the position of the error is 5. The correct data is $$D_5=0$$.
 

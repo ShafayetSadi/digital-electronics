@@ -166,8 +166,6 @@ $$
 \end{array}
 $$
 
-TODO: XOR gate using basic gates.
-
 We can use a XOR gate to implement an inverter. If we connect one input of the XOR gate to a constant high value, we get an inverter. The output is the inverse of the input.
 
 $$
@@ -223,8 +221,6 @@ $$
 \end{array}
 $$
 
-TODO: XNOR gate using basic gates.
-
 We can use a XNOR gate to implement an inverter. If we connect both inputs of the XNOR gate, we get an inverter. The output is the inverse of the input.
 
 $$
@@ -250,7 +246,7 @@ $$
 We can use two NAND gates to implement an AND gate. If we connect the output of the first NAND gate to the input of the second NAND gate, we get an AND gate.
 
 $$
-Y_1 = (A \cdot B)'
+Y_1 = (A \cdot B)' \\
 Y_2 = Y_1 \cdot Y_1 = A \cdot B
 $$
 
@@ -259,24 +255,15 @@ $$
 We can use three NAND gates to implement an OR gate. If we connect A to the first NAND gate, B to the second NAND gate, we will get $A'$ and $B'$ as outputs. If we connect the outputs of the first and second NAND gates to the third NAND gate, we get an OR gate.
 
 $$
-Y_1 = A \cdot A = A'
-Y_2 = B \cdot B = B'
+Y_1 = A \cdot A = A' \\
+Y_2 = B \cdot B = B' \\
 Y_3 = Y_1 \cdot Y_2 = A' \cdot B' = \overline{A' \cdot B'} = A + B
 $$
 
 ### NOR Gate using NAND
 
-TODO
-
 ### XOR Gate using NAND
-
-TODO: Important
 
 ### XNOR Gate using NAND
 
-TODO
-
 ## NOR Gate as Universal Gate
-
-TODO
-

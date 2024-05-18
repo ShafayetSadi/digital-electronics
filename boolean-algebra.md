@@ -108,7 +108,7 @@ $$
 $$
 \begin{align*}
     F   &= \overline{(A+C)(A+\overline{B})(\overline{A}+B+\overline{C})} \\
-        &= TODO
+        &= \text{TODO}
 \end{align*}
 $$
 
@@ -181,9 +181,6 @@ $$
 \begin{align*} F &= A.B + A.B' \\ &= A(B+B') \\ &= A.1 \\ &= A \end{align*}
 $$
 
-{% tabs %}
-{% tab title="Example 1" %}
-
 $$
 \begin{array}{|cc|c|}
 \hline
@@ -196,13 +193,6 @@ $$
 \hline
 \end{array}
 $$
-
-{% endtab %}
-
-{% tab title="Example 2" %}
-
-{% endtab %}
-{% endtabs %}
 
 Example 2:
 

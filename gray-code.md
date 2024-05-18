@@ -39,11 +39,11 @@ $$
 
 ### Linear Position Encoders
 
-Linear position encoders are devices that are used to measure the position of an object along a linear path. These devices are used in various applications, such as robotics, automation, and machine tools. The linear position encoders use Gray code to represent the position of the object. The Gray code is used because it is less susceptible to errors during data transmission and provides accurate position information. The linear position encoders consist of a scale and a read head. The scale is a linear strip that is attached to the object whose position needs to be measured. The read head is a sensor that reads the position of the scale and converts it into a Gray code. The Gray code is then used to determine the position of the object. The linear position encoders are used in various applications, such as CNC machines, 3D printers, and industrial robots. They provide accurate and reliable position information, which is essential for the proper functioning of these devices.
+Linear position encoders are devices that are used to measure the position of an object along a linear path. These devices are used in various applications, such as robotics, automation, and machine tools. The linear position encoders use Gray code to represent the position of the object. The Gray code is used because it is less susceptible to errors during data transmission and provides accurate position information. The linear position encoders consist of a scale and a read head. The scale is a linear strip that is attached to the object whose position needs to be measured. The read head is a sensor that reads the position of the scale and converts it into a Gray code. The Gray code is then used to determine the position of the object. 
 
 ### Rotary Encoders
 
-Rotary encoders are devices that are used to measure the angular position of an object. These devices are used in various applications, such as robotics, automation, and machine tools. The rotary encoders use Gray code to represent the angular position of the object. The Gray code is used because it is less susceptible to errors during data transmission and provides accurate position information. The rotary encoders consist of a disc and a read head. The disc is attached to the object whose angular position needs to be measured. The read head is a sensor that reads the position of the disc and converts it into a Gray code. The Gray code is then used to determine the angular position of the object. The rotary encoders are used in various applications, such as CNC machines, robotic arms, and industrial robots. They provide accurate and reliable position information, which is essential for the proper functioning of these devices.
+Rotary encoders are devices that are used to measure the angular position of an object. These devices are used in various applications, such as robotics, automation, and machine tools. The rotary encoders use Gray code to represent the angular position of the object. The Gray code is used because it is less susceptible to errors during data transmission and provides accurate position information. The rotary encoders consist of a disc and a read head. The disc is attached to the object whose angular position needs to be measured. The read head is a sensor that reads the position of the disc and converts it into a Gray code. The Gray code is then used to determine the angular position of the object. 
 
 ### Error Detection and Correction
 
@@ -51,11 +51,7 @@ Gray code is used in error detection and correction techniques. The Gray code is
 
 ### Digital Communications
 
-Gray code is used in digital communications to represent data in a binary form. The Gray code is less susceptible to errors during data transmission, which makes it suitable for digital communications applications. The digital communications systems use Gray code to encode and decode data. The encoding process converts the data into Gray code, which is then transmitted over a communication channel. The decoding process converts the Gray code back into the original data. The digital communications systems are used in various applications, such as telecommunication, satellite communication, and computer networks. They provide reliable and accurate data transmission, which is essential for the proper functioning of these systems.
-
-### Data Transmission
-
-Gray code is used in data transmission to represent data in a binary form. The Gray code is less susceptible to errors during data transmission, which makes it suitable for data transmission applications. The data transmission systems use Gray code to encode and decode data. The encoding process converts the data into Gray code, which is then transmitted over a communication channel. The decoding process converts the Gray code back into the original data. The data transmission systems are used in various applications, such as telecommunication, satellite communication, and computer networks. They provide reliable and accurate data transmission, which is essential for the proper functioning of these systems.
+Gray code is used in digital communications to represent data in a binary form. The Gray code is less susceptible to errors during data transmission, which makes it suitable for digital communications applications. The digital communications systems use Gray code to encode and decode data. The encoding process converts the data into Gray code, which is then transmitted over a communication channel. The decoding process converts the Gray code back into the original data.
 
 ## Binary to Gray Code Conversion
 
@@ -68,11 +64,13 @@ The conversion of binary code to Gray code can be done using the following steps
 5. Repeat steps 3 and 4 for the remaining bits of the binary code.
 
 $$
-(1010)_2 = (1111)_G \\
-G_3 = B_3 \\
-G_2 = B_3 \oplus B_2 \\
-G_1 = B_2 \oplus B_1 \\
-G_0 = B_1 \oplus B_0
+\begin{align*}
+(1010)_2 &= (1111)_G \\
+G_3 &= B_3 \\
+G_2 &= B_3 \oplus B_2 \\
+G_1 &= B_2 \oplus B_1 \\
+G_0 &= B_1 \oplus B_0
+\end{align*}
 $$
 
 To convert Gray code to binary code, the following steps can be followed:
@@ -84,10 +82,12 @@ To convert Gray code to binary code, the following steps can be followed:
 5. Repeat steps 3 and 4 for the remaining bits of the Gray code.
 
 $$
-(1111)_G = (1010)_2 \\
-B_3 = G_3 \\
-B_2 = B_3 \oplus G_2 \\
-B_1 = B_2 \oplus G_1 \\
-B_0 = B_1 \oplus G_0
+\begin{align*}
+(1111)_G &= (1010)_2 \\
+B_3 &= G_3 \\
+B_2 &= B_3 \oplus G_2 \\
+B_1 &= B_2 \oplus G_1 \\
+B_0 &= B_1 \oplus G_0
+\end{align*}
 $$
 

@@ -45,6 +45,8 @@ Edge triggering is used in flip-flops. It has two types: positive edge triggerin
 
 Level triggering is used in latches. The output changes when the clock signal is high level or low level.
 
+Edge triggering is faster than level triggering. Level triggering is more reliable than edge triggering.
+
 ## Latch and Flip-Flop
 
 Latches and flip-flops are the basic building blocks of sequential circuits. They are used to store the data in the sequential circuits. They are bistable multivibrators. They have two stable states: set state and reset state. They can store one bit of data(0 or 1).

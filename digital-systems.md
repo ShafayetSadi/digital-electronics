@@ -79,15 +79,20 @@ An actuators is a device that converts an electrical signal into a physical vari
 <figure><img src=".gitbook/assets/digital-systems/temperature-regulation-system.png" alt="Temperature Regulation System"><figcaption><p>Temperature Regulation System</p></figcaption></figure>
 
 
-### Example of Digital Control System
-
-### Functional diagram of Computer
-
-### Transfer of information among Resisters
-
-
 ## Combinational & Sequential Logic
 
 In combinational logic, the outputs depend only on the current inputs. 
 
 In sequential logic, the outputs depend on the current inputs and the past inputs. Meaning, we have memory to store the past inputs. The memory is in the form of flip-flops.
+
+## Difference Between Microprocessor and Microcontroller
+
+| Microprocessor | Microcontroller |
+|----------------|-----------------|
+| It is a single-chip CPU. | It is a single-chip CPU with built-in RAM, ROM, I/O ports, and timers. |
+| It requires external memory. | It has built-in memory. |
+| It is used in personal computers. | It is used in embedded systems. |
+| It is used in applications where cost is not a major concern. | It is used in applications where cost is a major concern. |
+| It consumes more power. | It consumes less power. |
+| High processing speed. | Low processing speed. |
+
