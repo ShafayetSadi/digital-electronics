@@ -22,7 +22,7 @@ Step 3: Compare the minterms in adjacent groups. If two minterms differ in only 
 
 Step 4: Repeat step 3 until no more groups can be formed.
 
-Step 5: The minterms in each group are combined to form a prime implicant. The prime implicants are then combined to form the essential prime implicants and the non-essential prime implicants.
+Step 5: The minterms in each group are combined to form a prime implicant. The prime implicants are then combined to form the essential prime implicants and the non-essential prime implicants (don't cares excluded).
 
 Step 6: The essential prime implicants are combined to form the minimum sum of products expression.
 
@@ -42,9 +42,9 @@ Group & Minterm & A B C D & Matched \\
 & m_9 & 1 0 0 1 & ✅ \\
 \hline
 3 & m_7 & 0 1 1 1 & ✅ \\
-& m_11 & 1 0 1 1 & ✅ \\
+& m_{11} & 1 0 1 1 & ✅ \\
 \hline
-4 & m_15 & 1 1 1 1 & ✅ \\
+4 & m_{15} & 1 1 1 1 & ✅ \\
 \hline
 \end{array}
 $$
@@ -58,7 +58,7 @@ Step 3 & 4:
 $$
 \begin{array}{|c|c|cccc|c|}
 \hline
-Group & Matched Pair & A&B&C&D & Matched \\
+Group & Matched\, Pair & A&B&C&D & Matched \\
 \hline
 0 & m_0,m_1 & 0&0&0&d & ✅ \\
 & m_0,m_8 & d&0&0&0 & ✅ \\
@@ -83,16 +83,16 @@ $$
 $$
 \begin{array}{|c|c|cccc|c|}
 \hline
-Group & Matched Pair & A&B&C&D & Prime Imp \\
+Group & Matched\, Pair & A&B&C&D & Prime\, Imp \\
 \hline
 0 & m_0,m_1, m_8,m_9 & d&0&0&d & B'C' \\
-& m_0,m_8, m_1,m_9 & d&0&0&d & B'C' \\
+& m_0,m_8, m_1,m_9 & d&0&0&d & \\
 \hline
 1 & m_1,m_3, m_9,m_{11} & d&0&d&1 & B'C \\
-& m_1,m_9, m_3,m_{11} & d&0&d&1 & B'C \\
+& m_1,m_9, m_3,m_{11} & d&0&d&1 & \\
 \hline
 3 & m_3,m_7, m_{11},m_{15} & d&d&1&1 & CD \\
-& m_3,m_{11}, m_7,m_{15} & d&d&1&1 & CD \\
+& m_3,m_{11}, m_7,m_{15} & d&d&1&1 & \\
 \hline
 \end{array}
 $$
@@ -108,11 +108,11 @@ $$
 \hline
 Prime\,Imp & Minterms & 0 & 1 & 3 & 7 & 8 & 9 & 11 & 15 \\
 \hline
-B'C' & 0, 1, 8, 9 & x & x & 3 & 7 & x & x & 11 & 15 \\
+B'C' & 0, 1, 8, 9 & [x] & x & 3 & 7 & [x] & x & 11 & 15 \\
 \hline
 B'D & 1, 3, 9, 11 & 0 & x & x & 7 & 8 & x & x & 15 \\
 \hline
-CD & 3, 7, 11, 15 & 0 & 1 & x & x & 8 & 9 & x & x \\
+CD & 3, 7, 11, 15 & 0 & 1 & x & [x] & 8 & 9 & x & [x] \\
 \hline
 \end{array}
 $$
