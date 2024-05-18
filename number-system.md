@@ -19,7 +19,7 @@ Among these are: light bulb (bright or dark), diode (conducting or nonconducting
 TODO
 
 $$
-(3456)_{10} = 3*10^3 + 4*10^2 + 5*10^1 + 6*10^0 = 3000 + 400 + 50 + 6 //
+(3456)_{10} = 3*10^3 + 4*10^2 + 5*10^1 + 6*10^0 = 3000 + 400 + 50 + 6 \\
 (11101010)_2 = 1*2^7 + 1*2^6 + 1*2^5 + 0*2^4 + 1*2^3 + 0*2^2 + 1*2^1 + 0*2^0 = 128 + 64 + 32 + 0 + 8 + 0 + 2 + 0 = 234
 $$
 The leftmost digit is the most significant digit (MSD) and the rightmost digit is the least significant digit (LSD).
@@ -54,6 +54,15 @@ With `n` bits, the range of numbers that can be represented is from $-2^{n-1}$ t
 ## Arithmetic Operations in 2's Complement
 
 TODO
+
+## Why do we need binary number system?
+
+* **Simplicity**: Binary system is simple and easy to understand. It has only two digits, 0 and 1.
+* **Efficiency**: Binary system is efficient for digital systems. It is easy to implement in electronic circuits.
+* **Compatibility**: Binary system is compatible with digital systems. It is used in computers, calculators, and other digital devices.
+* **Ease of logic operations**: Binary system simplifies logic operations in digital systems. It is used in logic gates, flip-flops, and other digital components.
+* **Error detection and correction**: Binary system is used in error detection and correction codes like Hamming codes and CRC (Cyclic Redundancy Check).
+* **Universality and Standardization**: Binary system is universally used in digital systems. It is the standard for digital communication and data processing.
 
 ## Octal System
 

@@ -120,6 +120,19 @@ $$
 
 ### Redundancy Theorem
 
+TODO
+
+### Duality Principle
+
+If an algebraic expression is true for all possible values of the variables, then the dual of the expression is also true for all possible values of the variables. The dual of an expression is obtained by interchanging the AND and OR operators and replacing the variables by their complements. Example:
+
+$$
+\begin{align*}
+    F   &= A+B \\
+    F'  &= A'.B'
+\end{align*}
+$$
+
 
 ## Logic Gate
 

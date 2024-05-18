@@ -2,6 +2,13 @@
 
 Gray code is a binary code that is used to represent decimal numbers in a binary form. It is also known as the reflected binary code. The Gray code is a non-weighted code, which means that the weights associated with the bits in the code are not powers of 2. The Gray code is used in various applications, such as digital communications, error detection and correction, and data transmission.
 
+**Characteristics of Gray Code:**
+
+1. Each decimal digit is represented by a 4-bit binary code.
+2. It is a non-weighted code.
+3. Single-bit changes between consecutive numbers.
+4. Reflection property: The Gray code of a number is the reflection of the Gray code of the previous number.
+
 Let us see 4-bit Gray code for decimal numbers from 0 to 15.
 $$
 \begin{array}{|c|c|c|}

@@ -41,6 +41,18 @@ An analog system contains devices that manipulate quantities that are represente
 
 * The real world is analog.
 * Processing digitized signals takes time.
+* Digitizing real world signals can introduce errors.
+
+## Difference Between Analog and Digital Systems
+
+| Analog System | Digital System |
+|---------------|----------------|
+| Analog systems are continuous in nature. | Digital systems are discrete in nature. |
+| Analog systems are more prone to noise. | Digital systems are less prone to noise. |
+| Analog systems are less accurate. | Digital systems are more accurate. |
+| Analog systems are more complex. | Digital systems are less complex. |
+| Need more power. | Need less power. |
+| Used in audio systems, temperature control systems, etc. | Used in computers, calculators, etc. |
 
 ## Interfacing With Real-World
 
@@ -50,6 +62,16 @@ Steps to follow to deal with analog input and output:
 * Convert the electrical (analog) signal into digital form.
 * Process (operate on) the digital information.
 * Convert the digital outputs back to real-world analog form.
+
+```text
+[Physical Variable] -> [Analog Signal (Transducer)] -> [Analog to Digital Converter] -> [Digital Processor] -> [Digital to Analog Converter] -> [Physical Variable (Actuator)]
+```
+
+<figure><img src=".gitbook/assets/digital-systems/real-world-interfacing.png" alt="Interfacing With Real World"><figcaption><p>Interfacing With Real World</p></figcaption></figure>
+
+A transducer is a device that converts a physical variable into an electrical signal. An example is a temperature sensor that converts temperature into an electrical signal.
+
+An actuators is a device that converts an electrical signal into a physical variable. An example is a motor that converts electrical signal into motion.
 
 A precision temperature regulation system -> Tocci -> page 7
 

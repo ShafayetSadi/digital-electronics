@@ -231,6 +231,10 @@ $$
 Y = A \odot A = A'
 $$
 
+## Universal Gates
+
+Universal gates are the gates that can be used to implement any other gate. The NAND and NOR gates are the universal gates. We can generate any logical boolean expression using only NAND or NOR gates.
+
 ## NAND Gate as Universal Gate
 
 ### Inverter using NAND

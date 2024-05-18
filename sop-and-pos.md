@@ -8,7 +8,7 @@ Total number of combination is $$2^n$$, where n is the number of variables.
 Truth Table:
 
 $$
-\begin{tabular}{|c|c|c|c|c|}
+\begin{array}{|c|c|c|c|c|}
 \hline
 m & A & B & C & F \\
 \hline
@@ -21,7 +21,7 @@ m & A & B & C & F \\
 6 & 1 & 1 & 0 & 1 \\
 7 & 1 & 1 & 1 & 1 \\
 \hline
-\end{tabular}
+\end{array}
 $$
 
 Boolean Function of SOP,
