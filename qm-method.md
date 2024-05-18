@@ -123,3 +123,114 @@ $$
 Y = B'C' + CD
 $$
 
+### Example 02
+
+$$
+F(W,X,Y,Z) = \sum m(0, 3, 5, 6, 7, 10, 12, 13) + \sum d(2, 9, 15)
+$$
+
+Step 1 & 2:
+
+$$
+\begin{array}{|c|c|cccc|c|}
+\hline
+Group & Minterm & W&X&Y&Z & Matched \\
+\hline
+G_0 & m_0 & 0&0&0&0 & ✅ \\
+\hline
+G_1 & m_2 & 0&0&1&0 & ✅ \\
+\hline
+G_2 & m_3 & 0&0&1&1 & ✅ \\
+& m_5 & 0&1&0&1 & ✅ \\
+& m_6 & 0&1&1&0 & ✅ \\
+& m_9 & 1&0&0&1 & ✅ \\
+& m_{10} & 1&0&1&0 & ✅ \\
+& m_{12} & 1&1&0&0 & ✅ \\
+\hline
+G_3 & m_7 & 0&1&1&1 & ✅ \\
+& m_{13} & 1&1&0&1 & ✅ \\
+\hline
+G_4 & m_{15} & 1&1&1&1 & ✅ \\
+\hline
+\end{array}
+$$
+
+Step 3 & 4:
+
+$$
+\begin{array}{|c|c|cccc|c|}
+\hline
+Group & Matched\, Pair & W&X&Y&Z & Matched \\
+\hline
+G_0' & m_0,m_2 & 0&0&d&0 & ✅ \\
+\hline
+G_1' & m_2,m_3 & 0&0&d&d & ✅ \\
+& m_2,m_6 & 0&0&d&d & ✅ \\
+& m_2,m_{10} & 0&0&d&d & ✅ \\
+\hline
+G_2' & m_3,m_7 & 0&d&1&1 & ✅ \\
+& m_5,m_7 & 0&d&0&1 & ✅ \\
+& m_5,m_{13} & 0&d&0&1 & ✅ \\
+& m_6,m_7 & 0&d&1&0 & ✅ \\
+& m_9,m_{13} & 1&d&0&1 & ✅ \\
+& m_{12},m_{13} & 1&d&0&1 & ✅ \\
+\hline
+G_3' & m_7,m_{15} & d&d&1&1 & ✅ \\
+& m_{13},m_{15} & 1&d&0&d & ✅ \\
+\hline
+\end{array}
+$$
+
+$$
+\begin{array}{|c|c|cccc|c|}
+\hline
+Group & Matched\, Pair & W&X&Y&Z & Matched \\
+\hline
+G_1'' & m_2,m_3,m_6,m_7 & 0&0&d&d & ✅ \\
+& m_2,m_6,m_3,m_7 & 0&0&d&d & \\
+\hline
+G_2'' & m_5,m_7,m_{13},m_{15} & 0&d&0&1 & ✅ \\
+& m_5,m_{13},m_7,m_{15} & 0&d&0&1 & \\
+\hline
+\end{array}
+$$
+
+$$
+\begin{array}{|c|c|cccc|c|}
+\hline
+Group & Matched\, Pair & W&X&Y&Z & Prime\, Imp \\
+\hline
+G_0''' & m_0,m_2 & 0&0&d&0 & W'X'Z \\
+\hline
+G_1'' & m_2,m_3,m_6,m_7 & 0&0&d&d & W'X' \\
+& m_2,m_{10},m_3,m_7 & 0&0&d&d & \\
+\hline
+G_2'' & m_5,m_7,m_{13},m_{15} & 0&d&0&1 & WX'Z \\
+& m_9,m_{13} & 1&d&0&1 & \\
+& m_{12},m_{13} & 1&d&0&1 & \\
+\hline
+\end{array}
+$$
+
+Step 5:
+
+$$
+\begin{array}{|c|c|cccccccc|}
+\hline
+Prime\,Imp & Minterms & 0 & 2 & 3 & 5 & 6 & 7 & 9 & 10 & 12 & 13 & 15 \\
+\hline
+W'X'Z & 0, 2 & [x] & x & x & x & x & x & x & x & x & x & x \\
+\hline
+W'X' & 2, 3, 6, 7 & 0 & [x] & x & x & x & x & x & x & x & x & x \\
+\hline
+WX'Z & 5, 7, 13, 15 & 0 & x & x & [x] & x & [x] & x & x & x & x & [x] \\
+\hline
+\end{array}
+$$
+
+The boolean expression is,
+
+$$
+F = W'X'Z + WX'Z
+$$
+
