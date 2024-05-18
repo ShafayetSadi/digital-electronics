@@ -29,3 +29,14 @@ It is a way of representing letters, characters, and numbers using binary number
 | ASCII is limited to English characters. | Unicode supports multiple languages and symbols. |
 | Used in old legacy systems. | Used in modern systems and applications. |
 | ASCII is not backward compatible with Unicode. | Unicode is backward compatible with ASCII. |
+
+
+## Bytes and Nibbles
+
+* **Byte:** A group of 8 bits is called a byte. It is the basic unit of storage in a computer.
+* **Nibble:** A group of 4 bits is called a nibble. It is half of a byte.
+
+## Why Binary Codes are Used?
+
+Binary is transistor based, which is the fundamental building block of digital systems. It is easier to maintain saturation and cutoff regions in transistors, enabling devices to be in either ON or OFF state.
+

@@ -64,7 +64,8 @@ Steps to follow to deal with analog input and output:
 * Convert the digital outputs back to real-world analog form.
 
 ```text
-[Physical Variable] -> [Analog Signal (Transducer)] -> [Analog to Digital Converter] -> [Digital Processor] -> [Digital to Analog Converter] -> [Physical Variable (Actuator)]
+[Physical Variable] -> [Analog Signal (Transducer)] -> [Analog to Digital Converter] -> 
+[Digital Processor] -> [Digital to Analog Converter] -> [Physical Variable (Actuator)]
 ```
 
 <figure><img src=".gitbook/assets/digital-systems/real-world-interfacing.png" alt="Interfacing With Real World"><figcaption><p>Interfacing With Real World</p></figcaption></figure>
@@ -73,9 +74,10 @@ A transducer is a device that converts a physical variable into an electrical si
 
 An actuators is a device that converts an electrical signal into a physical variable. An example is a motor that converts electrical signal into motion.
 
-A precision temperature regulation system -> Tocci -> page 7
+**A precision temperature regulation system:**
 
-Recording of audio -> Tocci -> page 8
+<figure><img src=".gitbook/assets/digital-systems/temperature-regulation-system.png" alt="Temperature Regulation System"><figcaption><p>Temperature Regulation System</p></figcaption></figure>
+
 
 ### Example of Digital Control System
 
