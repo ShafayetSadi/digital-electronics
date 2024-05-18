@@ -79,9 +79,6 @@ $$
 {% endtab %}
 
 {% tab title="Table 2" %}
-{% endtab %}
-
-{% tab title="Table 2" %}
 
 $$
 \begin{array}{|c|c|cccc|c|}
