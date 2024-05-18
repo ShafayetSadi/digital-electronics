@@ -28,17 +28,77 @@ Step 6: The essential prime implicants are combined to form the minimum sum of p
 
 Step 1 & 2:
 
-<table><thead><tr><th width="247" align="center">Group</th><th align="center">Minterm</th><th align="center">A B C D</th><th>Matched</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">m_0</td><td align="center">0 0 0 0</td><td>✅</td></tr><tr><td align="center">1</td><td align="center">m_1<br>m_8</td><td align="center">0 0 0 1<br>1 0 0 0</td><td>✅<br>✅</td></tr><tr><td align="center">2</td><td align="center">m_3<br>m_9</td><td align="center">0 0 1 1<br>1 0 0 1</td><td>✅<br>✅</td></tr><tr><td align="center">3</td><td align="center">m_7<br>m_11</td><td align="center">0 1 1 1<br>1 0 1 1</td><td>✅<br>✅</td></tr><tr><td align="center">4</td><td align="center">m_15</td><td align="center">1 1 1 1</td><td>✅</td></tr></tbody></table>
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+Group & Minterm & A B C D & Matched \\
+\hline
+0 & m_0 & 0 0 0 0 & ✅ \\
+\hline
+1 & m_1 & 0 0 0 1  & ✅ \\
+& m_8 & 1 0 0 0 & ✅ \\
+\hline
+2 & m_3 & 0 0 1 1 & ✅ \\
+& m_9 & 1 0 0 1 & ✅ \\
+\hline
+3 & m_7 & 0 1 1 1 & ✅ \\
+& m_11 & 1 0 1 1 & ✅ \\
+\hline
+4 & m_15 & 1 1 1 1 & ✅ \\
+\hline
+\end{array}
+$$
+
 
 Step 3 & 4:
 
 {% tabs %}
 {% tab title="Table 1" %}
-<table><thead><tr><th width="115" align="center">Group</th><th align="center">Matched Pairs</th><th align="center">A B C D</th><th>Matched</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">m_0, m_1<br>m_0, m_8</td><td align="center">0 0 0 d<br>d 0 0 0</td><td>✅<br>✅</td></tr><tr><td align="center">1</td><td align="center">m_1, m_3<br>m_1, m_9<br>m_8, m_9</td><td align="center">0 0 d 1<br>d 0 0 1<br>1 0 0 d</td><td>✅<br>✅<br>✅</td></tr><tr><td align="center">2</td><td align="center">m_3, m_7<br>m_3, m_11<br>m_9, m_11</td><td align="center">0 d 1 1<br>d 0 1 1<br>1 0 d 1</td><td>✅<br>✅<br>✅</td></tr><tr><td align="center">3</td><td align="center">m_7, m_15<br>m_11, m_15</td><td align="center">d 1 1 1<br>1 d 1 1</td><td>✅<br>✅</td></tr></tbody></table>
+
+$$
+\begin{array}{|c|c|cccc|c|}
+\hline
+Group & Matched Pair & A&B&C&D & Matched \\
+\hline
+0 & m_0,m_1 & 0&0&0&d & ✅ \\
+& m_0,m_8 & d&0&0&0 & ✅ \\
+\hline
+1 & m_1,m_3 & 0&0&d&1 & ✅ \\
+& m_1,m_9 & d&0&0&1 & ✅ \\
+& m_8,m_9 & 1&0&0&d & ✅ \\
+\hline
+2 & m_3,m_7 & 0&d&1&1 & ✅ \\
+& m_3,m_{11} & d&0&1&1 & ✅ \\
+& m_9,m_{11} & 1&0&d&1 & ✅ \\
+\hline
+3 & m_7,m_{15} & d&1&1&1 & ✅ \\
+& m_{11},m_{15} & 1&d&1&1 & ✅ \\
+\hline
+\end{array}
+$$
 {% endtab %}
 
 {% tab title="Table 2" %}
-<table><thead><tr><th width="104">Group</th><th width="248" align="center">Matched Pair</th><th width="234" align="center">A B C D</th><th>Prime Imp</th></tr></thead><tbody><tr><td>0</td><td align="center">m_0,m_1, m_8,m_9<br>m_0,m_8, m_1,m_9</td><td align="center">d 0 0 d<br>d 0 0 d</td><td>B'C'</td></tr><tr><td>1</td><td align="center">m_1,m_3, m_9,m_11<br>m_1,m_9, m_3,m_11</td><td align="center">d 0 d 1<br>d 0 d 1</td><td>B'C</td></tr><tr><td>3</td><td align="center">m_3,m_7, m_11,m_15<br>m_3,m_11, m_7,m_15</td><td align="center">d d 1 1<br>d d 1 1</td><td>CD</td></tr></tbody></table>
+{% endtab %}
+
+{% tab title="Table 2" %}
+
+$$
+\begin{array}{|c|c|cccc|c|}
+\hline
+Group & Matched Pair & A&B&C&D & Prime Imp \\
+\hline
+0 & m_0,m_1, m_8,m_9 & d&0&0&d & B'C' \\
+& m_0,m_8, m_1,m_9 & d&0&0&d & B'C' \\
+\hline
+1 & m_1,m_3, m_9,m_{11} & d&0&d&1 & B'C \\
+& m_1,m_9, m_3,m_{11} & d&0&d&1 & B'C \\
+\hline
+3 & m_3,m_7, m_{11},m_{15} & d&d&1&1 & CD \\
+& m_3,m_{11}, m_7,m_{15} & d&d&1&1 & CD \\
+\hline
+\end{array}
+$$
 {% endtab %}
 {% endtabs %}
 
@@ -46,11 +106,19 @@ Step 5:
 
 We will find the single cross mark in each column and mark them. These rows are the essential prime implicants.
 
-| Prime Implicants | Minterms Involved |                                    0 \| 1 \| 3 \| 7 \| 8 \| 9 \| 11 \| 15                                    |
-| :--------------: | :---------------: | :----------------------------------------------------------------------------------------------------------: |
-|       B'C'       |     0, 1, 8, 9    | <mark style="color:orange;">x</mark> \| x \| 3 \| 7 \| <mark style="color:orange;">x</mark> \| x \| 11 \| 15 |
-|        B'D       |    1, 3, 9, 11    |                                    0 \| x \| x \| 7 \| 8 \| x \| x  \| 15                                    |
-|        CD        |    3, 7, 11, 15   | 0 \| 1 \| x \| <mark style="color:orange;">x</mark> \| 8 \| 9 \| x  \| <mark style="color:orange;">x</mark>  |
+$$
+\begin{array}{|c|c|cccccccc|}
+\hline
+Prime\,Imp & Minterms & 0 & 1 & 3 & 7 & 8 & 9 & 11 & 15 \\
+\hline
+B'C' & 0, 1, 8, 9 & x & x & 3 & 7 & x & x & 11 & 15 \\
+\hline
+B'D & 1, 3, 9, 11 & 0 & x & x & 7 & 8 & x & x & 15 \\
+\hline
+CD & 3, 7, 11, 15 & 0 & 1 & x & x & 8 & 9 & x & x \\
+\hline
+\end{array}
+$$
 
 The boolean expression is,
 

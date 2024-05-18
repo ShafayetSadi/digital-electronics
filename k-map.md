@@ -18,6 +18,10 @@ The required boolean results are transferred from a truth table onto a two-dimen
 * Groups may wrap around the table. Like the leftmost cell in a row may be grouped with the rightmost cell in that row. Similar for columns also.
 * Number of groups should be as few as possible.
 
+## Why is gray code used in K-Map?
+
+Gray code ensures that only one bit changes between adjacent cells. This characteristic is important because it simplifies the process of identifying and grouping of common terms in the K-Map. It also enhances the efficiency by reducing the change of errors during simplification process.
+
 ## Examples
 
 ### Example 0
@@ -150,7 +154,7 @@ $$
 The groups we make in K-Map are called implicants. There are two types of implicants:
 
 * Prime Implicants: It is the largest possible group that can be made in a K-Map.
-* Essential Prime Implicants: It is the prime implicant that contains at least one cell with 1 that is not contained in any other prime implicant.
+* Essential Prime Implicants: It is the prime implicant that contains at least one cell with 1 that is not contained in any other prime implicant. In other words, implicants that can be included in only one way.
 
 Example:
 

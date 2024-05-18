@@ -268,6 +268,16 @@ F(A, B, C) &= ABC + AB'C + AB'C' + ABC + A'BC + ABC + ABC' \\
 \end{align*}
 $$
 
+Example:
+$$
+\begin{align*}
+F   &= (A+B+C')(A'+C) \\
+    &= (A+B+C')(A'+C+BB') \\
+    &= (A+B+C')(A'+C+B)(A'+C+B') \\
+\end{align*}
+$$
+
+
 **Shortcut Method:**
 $$
 \begin{align*}
@@ -283,6 +293,7 @@ So the min-terms are:
 $$
 F = \sum(1, 3, 5, 6, 7)
 $$
+
 
 ## Sum of Products
 
@@ -346,8 +357,6 @@ It is used when the output is low.
 
 Truth Table:
 
-<table data-full-width="false"><thead><tr><th align="center">m</th><th align="center">A</th><th align="center">B</th><th align="center">C</th><th align="center">F</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">0</td><td align="center">0</td><td align="center">0</td><td align="center">0</td></tr><tr><td align="center">1</td><td align="center">0</td><td align="center">0</td><td align="center">1</td><td align="center">0</td></tr><tr><td align="center">2</td><td align="center">0</td><td align="center">1</td><td align="center">0</td><td align="center">1</td></tr><tr><td align="center">3</td><td align="center">0</td><td align="center">1</td><td align="center">1</td><td align="center">0</td></tr><tr><td align="center">4</td><td align="center">1</td><td align="center">0</td><td align="center">0</td><td align="center">1</td></tr><tr><td align="center">5</td><td align="center">1</td><td align="center">0</td><td align="center">1</td><td align="center">1</td></tr><tr><td align="center">6</td><td align="center">1</td><td align="center">1</td><td align="center">0</td><td align="center">1</td></tr><tr><td align="center">7</td><td align="center">1</td><td align="center">1</td><td align="center">1</td><td align="center">1</td></tr></tbody></table>
-
 $$
 \begin{array}{|c|ccc|c|}
 \hline
@@ -374,4 +383,24 @@ $$
 In POS form, _0 -> A, 1 -> A'_. This is known as standard or canonical POS form. Because it is written directly from a truth table. In this form, each maxterm has all the variables of the function in normal or complemented form.
 
 Relation between SOP and POS:
+TODO
 
+## Maths
+
+**Q_1:** Express $$F=X'Y + XZ$$ in POS form.
+
+**Solution:**
+$$
+\begin{align*}
+F   &= X'Y + XZ \\
+    &= (X'Y + X)(X'Y + Z) \\
+    &= (X+Y)(X+X').(Z+Y)(Z+X') \\
+    &= (X+Y)(Y+Z)(Z+X') \\
+\end{align*}
+Now, \\
+X+Y = X+Y+ZZ' = (X+Y+Z)(X+Y+Z') \\
+Y+Z = Y+Z+XX' = (Y+Z+X)(Y+Z+X') \\
+Z+X' = Z+X'+YY' = (Z+X'+Y)(Z+X'+Y') \\
+So, \\
+F = (X+Y+Z)(X+Y+Z')(X'+Y+Z)(X'+Y'+Z)
+$$
