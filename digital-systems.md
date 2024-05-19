@@ -78,6 +78,9 @@ An actuators is a device that converts an electrical signal into a physical vari
 
 <figure><img src=".gitbook/assets/digital-systems/temperature-regulation-system.png" alt="Temperature Regulation System"><figcaption><p>Temperature Regulation System</p></figcaption></figure>
 
+## Functional Description of Digital Computer
+
+<figure><img src=".gitbook/assets/digital-systems/functional-description-of-digital-computer.png" alt="Functional Description of Digital Computer"><figcaption><p>Functional Description of Digital Computer</p></figcaption></figure>
 
 ## Combinational & Sequential Logic
 
