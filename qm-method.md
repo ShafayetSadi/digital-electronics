@@ -52,9 +52,6 @@ $$
 
 Step 3 & 4:
 
-{% tabs %}
-{% tab title="Table 1" %}
-
 $$
 \begin{array}{|c|c|cccc|c|}
 \hline
@@ -76,9 +73,6 @@ Group & Matched\, Pair & A&B&C&D & Matched \\
 \hline
 \end{array}
 $$
-{% endtab %}
-
-{% tab title="Table 2" %}
 
 $$
 \begin{array}{|c|c|cccc|c|}
