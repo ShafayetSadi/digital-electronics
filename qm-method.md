@@ -192,14 +192,14 @@ $$
 \hline
 Group & Matched\, Pair & W&X&Y&Z & Prime\, Imp \\
 \hline
-G_0''' & m_0,m_2 & 0&0&d&0 & W'X'Z \\
+G_0''' & m_0,m_2 & 0&0&d&0 & W'X'Z' \\
 \hline
-G_1'' & m_2,m_3,m_6,m_7 & 0&d&1&d & W'X' \\
-& m_2,m_{10},m_3,m_7 & d&0&1&0 & \\
+G_1'' & m_2,m_3,m_6,m_7 & 0&d&1&d & W'Y \\
+& m_2,m_{10},m_3,m_7 & d&0&1&0 & X'YZ'\\
 \hline
-G_2'' & m_5,m_7,m_{13},m_{15} & d&1&d&1 & WX'Z \\
-& m_9,m_{13} & 1&d&0&1 & \\
-& m_{12},m_{13} & 1&1&0&d & \\
+G_2'' & m_5,m_7,m_{13},m_{15} & d&1&d&1 & XZ \\
+& m_9,m_{13} & 1&d&0&1 & WY'Z\\
+& m_{12},m_{13} & 1&1&0&d & WXY'\\
 \hline
 \end{array}
 $$
@@ -211,11 +211,17 @@ $$
 \hline
 Prime\,Imp & Minterms & 0 & 2 & 3 & 5 & 6 & 7 & 9 & 10 & 12 & 13 & 15 \\
 \hline
-W'X'Z & 0, 2 & [x] & x & x & x & x & x & x & x & x & x & x \\
+W'X'Z' & 0, 2 & [x] & x & x & x & x & x & x & x & x & x & x \\
 \hline
-W'X' & 2, 3, 6, 7 & 0 & [x] & x & x & x & x & x & x & x & x & x \\
+W'Y & 2, 3, 6, 7 & x & [x] & x & x & x & x & x & x & x & x & x \\
 \hline
-WX'Z & 5, 7, 13, 15 & 0 & x & x & [x] & x & [x] & x & x & x & x & [x] \\
+X'YZ' & 2, 7, 10, 13 & x & x & x & x & x & [x] & x & [x] & x & x & x \\
+\hline
+XZ & 5, 7, 13, 15 & x & x & x & [x] & x & [x] & x & x & x & [x] & [x] \\
+\hline
+WY'Z & 9, 13 & x & x & x & x & x & x & x & x & x & [x] & x \\
+\hline
+WXY' & 12, 13 & x & x & x & x & x & x & x & x & [x] & x & [x] \\
 \hline
 \end{array}
 $$
