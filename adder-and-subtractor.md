@@ -51,10 +51,6 @@ A half adder can be implemented using two NAND gates. The sum bit is the output 
 
 <figure><img src=".gitbook/assets/adder-subtractor/halfAdderUsingNANDGates.png" alt=""><figcaption><p>Half adder using NAND gates</p></figcaption></figure>
 
-### Half Adder using NOR Gates
-
-Todo
-
 ## Full Adder
 
 A full adder is a combinational circuit that performs the addition of three bits (two significant bits and a previous carry) and produces a sum bit and a carry bit. It has three inputs: A, B and $$C_{in}$$, which add three input digits, and two outputs: S and $$C_{out}$$, which are the sum and carry out.
@@ -119,10 +115,6 @@ Logic gate for full adder:
 
 TODO
 
-### Full Adder using NAND Gates
-
-Todo
-
 ### Full Adder using Half Adder
 
 A full adder can be implemented using two half adders and one OR gate.
@@ -161,25 +153,18 @@ $$
 \end{array}
 $$
 
-The K-map for the difference bit and the borrow bit is:
-TODO
-
-The boolean expression for the difference bit is:
+From the truth table, the boolean expression for the difference bit is:
 $$
 D = AB' + A'B = A \oplus B
 $$
 
-The boolean expression for the borrow bit is:
+And the boolean expression for the borrow bit is:
 $$
 B_o = A'B
 $$
 
 Logic gate for half subtractor:
 <figure><img src=".gitbook/assets/adder-subtractor/halfSubtractorLogicGate.png" alt="" width="513"><figcaption><p>Half subtractor</p></figcaption></figure>
-
-### Half Subtractor using NAND Gates
-
-Todo
 
 ## Full Subtractor
 
@@ -234,10 +219,6 @@ TODO
 ### Full Subtractor using Half Subtractor
 
 TODO
-
-### Full Subtractor using NAND Gates
-
-Todo
 
 ## Four-bit Parallel Subtractor using Full Subtractor
 
