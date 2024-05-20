@@ -294,7 +294,7 @@ F(A, B, C)  &= A.B + C \\
 \end{align*}
 $$
 For the value of X, 0 or 1 can be used. So values we get are:
-$$110, 111$$, for $11.X$ 
+$$110, 111$$, for $$11.X$$ 
 $$001, 011, 101, 111$$, for $$XX.1$$
 So the min-terms are:
 $$
@@ -367,11 +367,11 @@ Truth Table:
 $$
 \begin{array}{|c|ccc|c|}
 \hline
-m & A & B & C & F \\
+M & A & B & C & F \\
 \hline
 0 & 0 & 0 & 0 & 0 \\
 1 & 0 & 0 & 1 & 0 \\
-2 & 0 & 1 & 0 & 1 \\
+2 & 0 & 1 & 0 & 0 \\
 3 & 0 & 1 & 1 & 0 \\
 4 & 1 & 0 & 0 & 1 \\
 5 & 1 & 0 & 1 & 1 \\
