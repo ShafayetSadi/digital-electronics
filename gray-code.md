@@ -49,10 +49,6 @@ Rotary encoders are devices that are used to measure the angular position of an 
 
 Gray code is used in error detection and correction techniques. The Gray code is less susceptible to errors during data transmission, which makes it suitable for error detection and correction applications. The error detection and correction techniques use Gray code to detect and correct errors in data transmission. The error detection techniques use parity bits to detect errors in the data. The error correction techniques use Hamming codes to correct errors in the data. The error detection and correction techniques are used in various applications, such as digital communications, data transmission, and computer networks. They provide reliable and accurate data transmission, which is essential for the proper functioning of these systems.
 
-### Digital Communications
-
-Gray code is used in digital communications to represent data in a binary form. The Gray code is less susceptible to errors during data transmission, which makes it suitable for digital communications applications. The digital communications systems use Gray code to encode and decode data. The encoding process converts the data into Gray code, which is then transmitted over a communication channel. The decoding process converts the Gray code back into the original data.
-
 ## Binary to Gray Code Conversion
 
 The conversion of binary code to Gray code can be done using the following steps:
@@ -77,7 +73,7 @@ To convert Gray code to binary code, the following steps can be followed:
 
 1. Start from the leftmost bit of the Gray code.
 2. Copy the leftmost bit of the Gray code to the binary code.
-3. XOR the leftmost bit of the Gray code with the next bit of the Gray code.
+3. XOR the rightmost bit of the binary with the next bit of the Gray code.
 4. Copy the result of the XOR operation to the binary code.
 5. Repeat steps 3 and 4 for the remaining bits of the Gray code.
 

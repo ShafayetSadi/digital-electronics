@@ -40,9 +40,9 @@ Whith `n` bits, the range of numbers that can be represented is from $$-(2^{n-1}
 
 ### 2's Complement
 
-The 2's complement of a binary number is obtained by adding 1 to the 1's complement of the number. The 2's complement of a binary number is obtained by XORing each digit of the number with 1 and adding 1 to the result. The 2's complement of a binary number is obtained by subtracting each digit of the number from 1 and adding 1 to the result.
+The 2's complement of a binary number is obtained by adding 1 to the 1's complement of the number. The 2's complement of a binary number is obtained by XORing each digit of the number with 1 and adding 1 to the result.
 
-For positive numbers, the 2's complement is the same as the binary number. For negative numbers, the 2's complement is the complement of the binary number. The 2's complement of a binary number is obtained by changing the sign bit and taking the complement of the magnitude bits and adding 1 to the result. In the 2's complement representation, there is only one representation for zero. So, arithmetic operations are easier in the 2's complement representation.
+For positive numbers, the 2's complement is the same as the binary number. For negative numbers, the 2's complement is the complement of the binary number. In the 2's complement representation, there is only one representation for zero. So, arithmetic operations are easier in the 2's complement representation.
 
 With `n` bits, the range of numbers that can be represented is from $$-2^{n-1}$$ to $$2^{n-1}-1$$.
 
@@ -59,7 +59,7 @@ With `n` bits, the range of numbers that can be represented is from $$-2^{n-1}$$
 
 The octal system consists of 8 numerals or symbols: 0, 1, 2, 3, 4, 5, 6, and 7. It is commonly used in computer programming and is also referred to as the base-8 system because it has 8 digits. The octal system is a positional-value system, meaning that the value of a digit depends on its position.
 
-We can see that $8=2^3$, indicating that each octal digit can be represented by 3 bits. The octal system is widely employed in computer programming because of its simplicity in converting between octal and binary. This means that each octal digit can be converted to 3 bits, and each set of 3 bits can be converted to an octal digit.
+We can see that $$8=2^3$$, indicating that each octal digit can be represented by 3 bits. The octal system is widely employed in computer programming because of its simplicity in converting between octal and binary. This means that each octal digit can be converted to 3 bits, and each set of 3 bits can be converted to an octal digit.
 
 ## Hexadecimal System
 

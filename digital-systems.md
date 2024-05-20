@@ -5,6 +5,7 @@
 We are constantly dealing with quantities. Quantities are measured, monitored, recorded, manipulated arithmetically, observed, or in some other way utilized in most physical systems. There are two ways of representing numerical value of quantities: analog and digital.
 
 **Analog Signal:** A signal whose amplitude can take any value within a given range.
+
 **Digital Signal:** A signal whose amplitude can take only finite number of values/discrete values.
 
 ### Analog Representation
