@@ -196,7 +196,7 @@ $$
 \end{array}
 $$
 
-For more than two inputs, the output is high when the number of high inputs is even. And the output is low when the number of high inputs is odd.
+For more than two inputs, the output is high when the number of high inputs are even. And the output is low when the number of high inputs are odd.
 
 $$
 Y = A \odot B \odot C = A'B'C' + A'BC + AB'C + ABC'
@@ -231,7 +231,6 @@ $$
 
 Universal gates are the gates that can be used to implement any other gate. The NAND and NOR gates are the universal gates. We can generate any logical boolean expression using only NAND or NOR gates.
 
-## NAND Gate as Universal Gate
 
 ### Inverter using NAND
 
@@ -266,4 +265,8 @@ $$
 
 ### XNOR Gate using NAND
 
-## NOR Gate as Universal Gate
+### Inverter using NOR
+
+### AND Gate using NOR
+
+### OR Gate using NOR

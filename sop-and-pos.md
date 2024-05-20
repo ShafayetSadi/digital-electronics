@@ -26,7 +26,7 @@ Three variable minterms:
 $$
 \begin{array}{|c|c|c|c|c|}
 \hline
-A & B & C & minterms & Notation \\
+A & B & C & \text{minterms} & \text{Notation} \\
 \hline
 0 & 0 & 0 & A'B'C' & m_0 \\
 0 & 0 & 1 & A'B'C & m_1 \\
@@ -184,7 +184,7 @@ Now the canonical POS form is:
 $$
 \begin{align*}
 \overline{F_1} &= \sum(1, 3, 5, 6) \\
-               &= m_1 + m_3 + m_5 + m_6
+               &= m_1 + m_3 + m_5 + m_6 \\
            F_2 &= \overline{m_1 + m_3 + m_5 + m_6} \\
                &= \overline{m_1}. \overline{m_3}. \overline{m_5}. \overline{m_6} \\
                &= M_1.M_3.M_5.M_6 \\

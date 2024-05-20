@@ -250,5 +250,5 @@ There are two ways to convert truth tables to Boolean functions:
 
 ## Canonical Form and Non-Canonical Form
 
-* Canonical form: A Boolean function is in canonical form if it is expressed as a sum of minterms or product of maxterms where all the variables are present in each term.
-* Non-canonical form: A Boolean function is in non-canonical form if it is expressed as a sum of maxterms or product of minterms where all the variables are not present in each term.
+* **Canonical form**: A Boolean function is in canonical form if it is expressed as a sum of minterms or product of maxterms where all the variables are present in each term.
+* **Non-canonical form**: A Boolean function is in non-canonical form if it is expressed as a sum of maxterms or product of minterms where all the variables are not present in each term.
